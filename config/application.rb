@@ -23,5 +23,3 @@ module MyApp
     # the framework and any gems in your application.
   end
 end
-
-lllll
