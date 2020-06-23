@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="Chart.min.js"></script>
+</head>
+<body>
+  <canvas id="ch"></canvas>
+<script>
+var ctx = document.getElementById("ch").getContext("2d");
+var chart = new Chart(ctx, {
+  type: "horizontalBar",
+  data:{
+    labels:["心","技","体"],
+    datasets:[{
+      data:[4,5,9,14,15,24,30]
+    }]
+  },
+  options:{}
+});
+</script>
+</body>
+</html>
+
+<%= @post %>
+<%= @i %>
+
+
+
+<%= link_to "トップページ", "/" %>

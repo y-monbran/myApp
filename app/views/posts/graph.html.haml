@@ -1,0 +1,50 @@
+%body
+  %h1
+  努力の可視化メーター
+    <canvas id="myRaderChart"></canvas>　//ここにグラフが表示
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>　//引用したurl
+    <link rel="stylesheet" href="style.css">
+    <script>
+      // id読み込み
+      var ctx = document.getElementById("myBaBarChart"); 
+      // ctx に埋め込むグラフを定義していきます。
+      var myBarChart = new Chart(ctx, {
+　　　 // 型の指定
+          type: 'horizontalBar', 
+
+    data: { 
+　　　　　　　// 項目の指定 ここを増やすと５角形とかにもなる
+            labels: ["個性", "香り", "味"],
+            datasets: [{
+                label: 'name',
+　　　　　　　// dataは項目に対応するバリュー，その下はグラフのcss
+                data: [3, 4, 3, ],
+                backgroundColor: 'RGBA(225,95,150, 0.5)',
+                borderColor: 'RGBA(225,95,150, 1)',
+                borderWidth: 1,
+                pointBackgroundColor: 'RGB(46,106,177)'
+            }]
+          },
+          options: {
+            title: {
+                display: true,
+            // グラフのタイトル
+                text: '評価'
+            },
+            // グラフの最大値，メモリの刻み方を調整
+            scale:{
+                ticks:{
+                    suggestedMin: 0,
+                    suggestedMax: 5,
+                    stepSize: 1,
+                    callback: function(value, index, values){
+                        return  value 
+                    }
+                }
+            }
+        }
+    });
+    </script>       
+</body>
+</html>
