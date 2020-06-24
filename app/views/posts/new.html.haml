@@ -1,0 +1,13 @@
+.Main
+本日の努力を入力しましょう
+= form_with url: "/",method: :post, local: true do |f|
+  心
+  = f.number_field :spirit, min: 0, max: 10
+  時間
+  技
+  = f.number_field :technique 
+  時間
+  体
+  = f.number_field :body 
+  時間
+  = f.submit "送信"

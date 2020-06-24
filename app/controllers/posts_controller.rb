@@ -1,10 +1,18 @@
 class PostsController < ApplicationController
   def index #トップページ 
-    @i = "iii"
+    
   end
 
-  def new #トップページのform_withに繋がる
-    @post = "newページ"
+  def new #入力ページ
+    @post = Post.new
+
+  end
+
+  def create #グラフページ
+    @posts = Post.all
+    Post.create(spirit: params[:spirit])
+    Post.create(technique: params[:technique])
+    Post.create(body: params[:body])
   end
 
   private

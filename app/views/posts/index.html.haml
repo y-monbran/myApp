@@ -1,6 +1,6 @@
 .Wrapper
   .Header
-    努力の可視化メーター
+    可視化メーター
   .Content
     %details
       -# = link_to '#' do
@@ -8,17 +8,5 @@
       = link_to "パラメーター", "/posts/new"
       = link_to "ログアウト"
   .Main
-    本日の努力を入力しましょう
-    = form_with model: @post do |f|
-      心
-      = f.number_field :new 
-      時間
-      技
-      = f.number_field :new
-      時間
-      体
-      = f.number_field :new
-      時間
+    = @posts
       
-      = @i
-      = @post
