@@ -3,10 +3,29 @@
     可視化メーター
   .Content
     %details
-      -# = link_to '#' do
       %summary= icon("fas", "cogs")
       = link_to "パラメーター", "/posts/new"
       = link_to "ログアウト"
   .Main
-    = @posts
+    .Main__title
+      %h2
+      積み上げ結果
+    .Main__text
+      .textContent
+      
+        - @posts.each do |post|
+          %p
+            心が 
+            = link_to post.spirit, post_path(post.id) 
+            ポイント上がった！
+            
+            技が
+            = link_to post.technique, post_path(post.id)
+            ポイント上がった！
+            体が
+            = link_to post.body, post_path(post.id)
+            ポイント上がった！
+            = link_to '編集', edit_post_path(post.id)
+
+
       

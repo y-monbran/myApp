@@ -1,13 +1,33 @@
-.Main
-本日の努力を入力しましょう
-= form_with url: "/",method: :post, local: true do |f|
+.Wrapper
+  .Header
+    可視化メーター
+  .Content
+    %details
+      -# = link_to '#' do
+      %summary= icon("fas", "cogs")
+      -# = link_to "トップページ", url: post_path(post)
+      -# = link_to "ログアウト"
+  .Main 
+
+= form_for :post, url: posts_path do |f|
+
   心
   = f.number_field :spirit, min: 0, max: 10
   時間
+  - @post.errors.messages[:spirit].any?
+  = @post.errors.messages[:spirit][0]
+  
   技
-  = f.number_field :technique 
+  = f.number_field :technique, min: 0, max: 10
+  - @post.errors.messages[:spirit].any?
+  = @post.errors.messages[:spirit][0]
   時間
   体
-  = f.number_field :body 
+  = f.number_field :body, min: 0, max: 10
+  - @post.errors.messages[:spirit].any?
+  = @post.errors.messages[:spirit][0]
   時間
   = f.submit "送信"
+
+
+

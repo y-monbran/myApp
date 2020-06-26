@@ -14,3 +14,26 @@
   height: 50px;
   background-color: red;
 }
+
+.Main {
+  &__title {
+    font-size: 64px;
+    background-color: yellow;
+    text-align: center;
+  }
+  &__text {
+    font-size: 24px;
+    background-color: pink;
+    padding: 20px 100px;
+    .textContent {
+      p {
+        background-color: lightgreen;
+        text-align: center;
+        border: 10px ridge red;
+        margin: 20px 0;
+      }
+      
+      
+    }
+  }
+}
