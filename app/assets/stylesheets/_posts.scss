@@ -3,7 +3,7 @@
 }
 
 .Header {
-  height: 200px;
+  height: 150px;
   background-color: darkgray;
   font-size: 70px;
   color: white;
@@ -17,16 +17,20 @@
 
 .Main {
   &__title {
+    height: 80px;
     font-size: 64px;
     background-color: yellow;
     text-align: center;
   }
   &__text {
+    height: calc(100vh - 280px);
     font-size: 24px;
-    background-color: pink;
+    background-color: white;
     padding: 20px 100px;
+    overflow: scroll;
     .textContent {
       p {
+        height: 60px;
         background-color: lightgreen;
         text-align: center;
         border: 10px ridge red;
