@@ -1,0 +1,25 @@
+.wrapper
+  .header
+    努力可視化メーター
+  .main
+    .mainText
+      .mainText__title
+        成果を入力して下さい
+        .mainText__title__content
+          心：家事など,技：勉強など,体：運動など
+      .mainText__list
+        = form_with model: Post.new do |f| 
+          .mainText__list__1
+            心
+            = f.number_field :spirit, min: 0, max: 10, class: "spirit"
+            時間
+          .mainText__list__2
+            技
+            = f.number_field :technique, min: 0, max: 10, class: "technique"
+            時間
+          .mainText__list__3
+            体
+            = f.number_field :body, min: 0, max: 10, class: "body"
+            時間
+          .mainText__list__4
+            = f.submit "送信", class: "submit"

@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  .header {
+    height: 100px;
+    background-color: blue;
+  }
+  .main {
+    height: calc(100% - 200px);
+    padding: 0 100px;
+    .mainText {
+      padding: 0 100px;
+      text-align: center;
+      display: block;
+      background-color: white;
+      &__title {
+        height: 80px;
+        font-size: 32px;
+        padding-top: 10px;
+        background-color: lightyellow;
+        &__content {
+          height: 20px;
+          font-size: 14px;
+          text-align: center;
+          background-color: lightsalmon;
+        }
+      }
+      &__list {
+        height: 400px;
+        background-color: lightgreen;
+        &__1 {
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gray;
+          background-color: lightpink;
+          .spirit {
+            height: 40px;
+            width: 60px;
+            padding: 5px;
+            margin-left: 20px;
+          }
+        }
+        &__2 {
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gray;
+          background-color: lightpink;
+          .technique {
+            height: 40px;
+            width: 60px;
+            padding: 5px;
+            margin-left: 20px;
+          }
+        }
+        &__3 {
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gray;
+          background-color: lightpink;
+          .body {
+            height: 40px;
+            width: 60px;
+            padding: 5px;
+            margin-left: 20px;
+          }
+        }
+        &__4 {
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: lightpink;
+          .submit {
+            height: 40px;
+            width: 60px;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
