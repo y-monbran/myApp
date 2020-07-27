@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## app name
+アプリ名:
+努力可視化メーター
 
-Things you may want to cover:
+## overview
+概要:
+毎日の努力を可視化することができるアプリ。
 
-* Ruby version
 
-* System dependencies
+## production environment
+本番環境(デプロイ先　テストアカウント＆ID):
 
-* Configuration
 
-* Database creation
+## production background
+制作背景(意図):
+努力した時間を可視化することによって、モチベーションアップに繋がるようにしたかったので作成しました。
 
-* Database initialization
+## DEMO
+DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます):
+　⇒特に、デプロイがまだできていない場合はDEMOをつけることで見た目を企業側に伝えることができます。
 
-* How to run the test suite
+## points devised
+工夫したポイント:
+グラフを表示するために「chart.js」というgemを導入しました
 
-* Services (job queues, cache servers, search engines, etc.)
+## technology used
+使用技術(開発環境):
+vscode
+haml/scss
+ruby on rails
 
-* Deployment instructions
+## issues and functions to be implemented in the future
+課題や今後実装したい機能:
+ユーザーを複数登録できるようにしたい。
+努力の時間をポイントに変換（1時間=1ポイント）し、ポイントでアイテムなどを交換できるようにしたい。
+色々障害はあると思いますが、将来的にポイントで現実の買い物ができルようになれば努力する人が増えて、社会全体が良い方向に向かうのではないかと妄想しています。
 
-* ...
+## DB design
+DB設計:
+## postsテーブル
+|Column|Type|
+|------|----|
+|spirit|string|
+|technique|string|
+|body|string|
+
