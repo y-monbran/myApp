@@ -5,6 +5,8 @@
     .mainText
       .mainText__title
         成果を入力して下さい
+        .mainText__title__content
+          心：家事など,技：勉強など,体：運動など（整数のみ）
       .mainText__list
         = form_with(model: @post, local: true) do |f| 
           .mainText__list__1

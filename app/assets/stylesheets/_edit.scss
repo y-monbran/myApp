@@ -24,6 +24,12 @@
         font-size: 32px;
         padding-top: 10px;
         background-color: lightyellow;
+        &__content {
+          height: 20px;
+          font-size: 14px;
+          text-align: center;
+          background-color: lightsalmon;
+        }
       }
       &__list {
         height: 400px;
