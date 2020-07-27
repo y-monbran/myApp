@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100px;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  background-color: blue;
+}
+.main {
+  .mainTop {
+    height: 300px;
+    width: 100vw;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:lightgray;
+    .userImage {
+      height: 300px;
+      width: 300px;
+      background-color: white;
+    }
+    .userInfo {
+      height: 300px;
+      width: 300px;
+      margin-left: 20px;
+      padding: 10px;
+      background-color: white;
+      .userInfo_1 {
+        height: 80px;
+        width: 280px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        background-color: pink;
+      }
+      .userInfo_2 {
+        height: 80px;
+        width: 280px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        background-color: pink;
+      }
+      .userInfo_3 {
+        height: 80px;
+        width: 280px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: pink;
+        a {
+          // color: black;
+          text-decoration: none;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .mainBottom {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    #myChart {
+      height: 300px;
+      width: 300px;
+      background-color: black;
+    }
+  }
+}

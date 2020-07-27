@@ -1,31 +1,37 @@
-.Wrapper
-  .Header
-    可視化メーター
-  .Content
-    %details
-      %summary= icon("fas", "cogs")
-      = link_to "パラメーター", "/posts/new"
-      = link_to "ログアウト"
-  .Main
-    .Main__title
+.wrapper
+  .header
+    努力可視化メーター
+  .content
+    .contentUser
+      = image_tag 'user_image.png', alt: '画像', class: 'userImage'
+    .contentIcon
+      %details
+        %summary= icon("fas", "cogs")
+        = link_to "マイページ", graph_posts_path, class: "contentShow", method: :get
+  .main
+    .mainTitle
       %h2
       積み上げ結果
-    .Main__text
-      .textContent
-      
-        - @posts.each do |post|
-          %p
-            心が 
-            = link_to post.spirit, post_path(post.id) 
-            ポイント上がった！
-            
-            技が
-            = link_to post.technique, post_path(post.id)
-            ポイント上がった！
-            体が
-            = link_to post.body, post_path(post.id)
-            ポイント上がった！
-            = link_to '編集', edit_post_path(post.id)
-
-
-      
+      .mainText
+        .mainText__left
+          
+          = image_tag 'user_image.png', alt: '画像', class: 'userImage'
+        .mainText__right
+          .textTittle
+            .textTittle__box
+              = link_to "新規成果入力", new_post_path, class: "textTittle__content"
+          .textContent
+            - @posts.each do |post|
+              .balloonLeft
+                = post.created_at.strftime('%Y/%m/%d')
+                心が 
+                = post.spirit
+                ポイント上がった！
+                技が
+                = post.technique
+                ポイント上がった！
+                体が
+                = post.body
+                ポイント上がった！
+                = link_to '編集', edit_post_path(post.id), class: "contentEdit", method: :get
+                = link_to '削除', post_path(post.id), class: "contentDelete", method: :delete
