@@ -10,8 +10,9 @@
 
 
 ## production environment
-本番環境(デプロイ先　テストアカウント＆ID):
-
+本番環境:
+https://doryokame.herokuapp.com/
+表示されるまで時間がかかります。30秒ほど見積もっていだだきたく存じます。
 
 ## production background
 制作背景(意図):
