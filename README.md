@@ -62,5 +62,5 @@ DB設計:
 |body|string|
 
 # author
-作者：  
+作者:  
 twitter: https://twitter.com/XaIaQcuik2BbLGw
