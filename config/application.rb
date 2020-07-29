@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module MyApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 6.0
     config.generators do |g|
       g.stylesheets false
