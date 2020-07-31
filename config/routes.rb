@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'graph'
     end
   end
+  resources :items
 
 end
   
