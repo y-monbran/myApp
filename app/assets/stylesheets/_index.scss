@@ -39,6 +39,7 @@
         width: 100px;
         margin-top: 15px;
         margin-left: 5px;
+        z-index: 10;
         summary {
           outline: none;
         }
@@ -65,6 +66,7 @@
         overflow: scroll;
         display: flex;
         justify-content: space-around;
+        z-index: 5;
         &__left {
           height: 300px;
           width: 300px;
