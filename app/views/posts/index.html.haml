@@ -7,7 +7,14 @@
     .contentIcon
       %details
         %summary= icon("fas", "cogs")
-        = link_to "マイページ", graph_posts_path, class: "contentShow", method: :get
+        -if user_signed_in?
+          .user_nav
+          = link_to "マイページ", graph_posts_path, class: "contentShow", method: :get
+          %br= link_to "ログアウト", destroy_user_session_path, class: "contentShow", method: :delete
+        -else
+          .grid-6
+          = link_to "ログイン", new_user_session_path, class: "contentShow"
+          %br= link_to "新規登録", new_user_registration_path, class: "contentShow"
   .main
     .mainTitle
       %h2

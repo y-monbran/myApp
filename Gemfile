@@ -61,3 +61,5 @@ gem 'chartkick'
 gem 'chart-js-rails'
 
 gem 'rails_12factor', group: :production
+
+gem 'devise'
