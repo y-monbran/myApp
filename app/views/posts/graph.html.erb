@@ -9,14 +9,19 @@
     </div>
     <div class="userInfo">
       <div class="userInfo_1">
-        ユーザー名：
+        ユーザー名： <%= @user.nickname %>
       </div>
       <div class="userInfo_2">
         努力ポイント： <%= @sum %>ポイント
       </div>
       <div class="userInfo_3">
-        <a href="#">ポイント交換</a>
-        <a href="/">トップページ</a>
+        <div class="button1">
+          <a href="/items">アイテムショップ</a>
+        </div>
+        <div class="button2">
+          <a href="/">トップページ</a>
+        </div>
+        <%# <a href="/">トップページ</a> %>
       </div>
     </div>
   </div>

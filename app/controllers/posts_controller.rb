@@ -6,17 +6,19 @@ class PostsController < ApplicationController
     @posts = Post.all.order(created_at: 'desc').limit(4)
   end
   
-  def new
-    @post = Post.new
-  end
+  # def new
+  #   @post = Post.new
+  # end
 
   def show
   end
 
   def create
+    # binding.pry
+    # @user = User.find(params[:id])
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_path
+      redirect_to action: :index
     else
       render :new
     end
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to posts_path
+      redirect_to action: :index
     else
       render :edit
     end
@@ -37,7 +39,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      redirect_to posts_path
+      redirect_to action: :index
     else
       render :edit
     end
@@ -48,12 +50,13 @@ class PostsController < ApplicationController
     @technique = Post.all.sum(:technique).to_i
     @body = Post.all.sum(:body).to_i
     @sum = @spirit + @technique + @body
+    @user = current_user
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:spirit, :technique, :body)
+    params.require(:post).permit(:spirit, :technique, :body).merge(user_id: current_user.id)
   end
 
   def set_post

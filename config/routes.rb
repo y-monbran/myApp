@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :posts do
-    collection do
+    # collection do
+    member do
       get 'graph'
     end
   end
+  resources :items
+  # resources :purchases
 
 end
   

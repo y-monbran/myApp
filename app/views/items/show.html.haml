@@ -1,0 +1,8 @@
+items#showのビュー
+
+= form_with model: Purchase.new do |f| 
+  -# = @item2.price
+  -# = @item2.id
+  -# = f.label @item2.id
+  = f.check_box :status, {}, 1, nil
+  = f.submit "購入", class: "submit"

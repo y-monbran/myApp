@@ -9,7 +9,7 @@
         %summary= icon("fas", "cogs")
         -if user_signed_in?
           .user_nav
-          = link_to "マイページ", graph_posts_path, class: "contentShow", method: :get
+          = link_to "マイページ", graph_post_path(current_user.id), class: "contentShow", method: :get
           %br= link_to "ログアウト", destroy_user_session_path, class: "contentShow", method: :delete
         -else
           .grid-6
