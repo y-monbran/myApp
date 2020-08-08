@@ -84,7 +84,7 @@ has_many :items
 |id|integer|null: false|
 |name|string|null: false|
 |price|integer|null: false|
-|explanation|string|-|
+|explanation|string|null: false|
 |status|integer|null: false|
 |count|integer|null: false|
 |user_id|reference|null: false, foreign_key: true|
