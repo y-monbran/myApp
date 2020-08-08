@@ -1,6 +1,119 @@
 .itemShop
   .itemShop__header
-
+    .itemShop__header__title
+      アイテムショップ
   .itemShop__main
-  
+    .itemShop__main__title
+      アイテムを選択してください
+    .itemShop__main__lists
+      .itemShop__main__lists-1
+        .itemShop__main__lists__leftBox
+          .itemShop__main__lists__leftBox__image
+            = image_tag 'ticket1.png', alt: '画像', class: 'itemImage'
+        .itemShop__main__lists__rightBox
+        = form_with model: Item.new do |f| 
+          .itemShop__main__lists__rightBox__name
+            1000円券
+            -# = f.hidden_field :name, :value => @item1.name
+            = f.hidden_field :name, :value => "1000円券"
+            -# = f.label :name, @item1.name
+          .itemShop__main__lists__rightBox__explanation
+            1000円までなら自由に使ってよい
+            -# = f.hidden_field :explanation, :value => @item1.explanation
+            -# 1000円までなら自由に使ってよい
+            = f.hidden_field :explanation, :value => "1000円までなら自由に使ってよい"
+            -# = f.label :explanation, @item1.explanation
+          .itemShop__main__lists__rightBox__text
+            .itemShop__main__lists__rightBox__text__price
+              100ポイント
+              = f.hidden_field :price, :value => "100"
+              -# = f.label :price, @item1.price
+            -# = form_with model: Purchase.new do |f| 
+            -# = form_with model: Item.new do |f| 
+              -# = @item2.price
+              -# = @item2.name
+              -# = f.label :name 
+              -# = @item2
+              -# = f.label @item2.id
+              -# = f.check_box :status, {}, 1, nil
+              -# = f.submit "購入", class: "submit"
+            .itemShop__main__lists__rightBox__text__btn
+              = f.hidden_field :status, :value => "1"
+              = f.hidden_field :count, :value => "1"
+              -# = f.hidden_field :user_id, :value => current_user.id
+              -if @sum >= 100
+                = f.submit "購入", class: "submit"
+              -else
+                %p 100ポイント貯めて！
+
+      .itemShop__main__lists-2
+        .itemShop__main__lists__leftBox
+          .itemShop__main__lists__leftBox__image
+            = image_tag 'ticket2.png', alt: '画像', class: 'itemImage'
+        .itemShop__main__lists__rightBox
+        = form_with model: Item.new do |f| 
+          .itemShop__main__lists__rightBox__name
+            2000円券
+            = f.hidden_field :name, :value => "2000円券"
+          .itemShop__main__lists__rightBox__explanation
+            2000円までなら自由に使ってよい
+            = f.hidden_field :explanation, :value => "2000円までなら自由に使ってよい"
+          .itemShop__main__lists__rightBox__text
+            .itemShop__main__lists__rightBox__text__price
+              200ポイント
+              = f.hidden_field :price, :value => "200"
+            .itemShop__main__lists__rightBox__text__btn
+              = f.hidden_field :status, :value => "1"
+              = f.hidden_field :count, :value => "1"
+              -if @sum >= 200
+                = f.submit "購入", class: "submit"
+              -else
+                %p 200ポイント貯めて！
+
+      .itemShop__main__lists-3
+        .itemShop__main__lists__leftBox
+          .itemShop__main__lists__leftBox__image
+            = image_tag 'ticket3.png', alt: '画像', class: 'itemImage'
+        .itemShop__main__lists__rightBox
+        = form_with model: Item.new do |f| 
+          .itemShop__main__lists__rightBox__name
+            3000円券
+            = f.hidden_field :name, :value => "3000円券"
+          .itemShop__main__lists__rightBox__explanation
+            3000円までなら自由に使ってよい
+            = f.hidden_field :explanation, :value => "3000円までなら自由に使ってよい"
+          .itemShop__main__lists__rightBox__text
+            .itemShop__main__lists__rightBox__text__price
+              300ポイント
+              = f.hidden_field :price, :value => "300"
+            .itemShop__main__lists__rightBox__text__btn
+              = f.hidden_field :status, :value => "1"
+              = f.hidden_field :count, :value => "1"
+              -if @sum >= 300
+                = f.submit "購入", class: "submit"
+              -else
+                %p 300ポイント貯めて！
+
+      .itemShop__main__lists-4
+        .itemShop__main__lists__leftBox
+          .itemShop__main__lists__leftBox__image
+            = image_tag 'ticket.png', alt: '画像', class: 'itemImage'
+        .itemShop__main__lists__rightBox
+          .itemShop__main__lists__rightBox__name
+            アイテム名
+          .itemShop__main__lists__rightBox__explanation
+            アイテム説明
+          .itemShop__main__lists__rightBox__text
+            .itemShop__main__lists__rightBox__text__price
+              ポイント
+            .itemShop__main__lists__rightBox__text__btn
+              -# = link_to "購入する", id: "btn"
+ 
+      .itemShop__main__lists__footer
+        .itemShop__main__lists__footer__left
+          .itemShop__main__lists__footer__left__btn
+            = link_to "トップページ", posts_path, class: 'btn'
+        .itemShop__main__lists__footer__right
+          .itemShop__main__lists__footer__right__btn
+            = link_to "マイページ", graph_post_path(@user), class: 'btn'
   .itemShop__footer
