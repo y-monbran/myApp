@@ -20,7 +20,7 @@ password: 123456
 ## DEMO:  
  ![](https://i.gyazo.com/16155085885d7b6bda860c12301010de.png)
 ↑トップページになります。  
-赤帯の歯車アイコンからマイページに移動します。  
+赤帯の歯車アイコンからマイページに移動できます。（ログインしている場合）  
 画面中央部の新規成果入力ボタンから入力ページに移動します。  
 吹き出しの編集・削除から編集ページ・削除ページに移動します。
 ![image](https://user-images.githubusercontent.com/66244738/89706245-cae09f00-d99e-11ea-8eb4-f697197a9c6f.png)
@@ -58,12 +58,38 @@ ruby on rails
 色々障害はあると思いますが、将来的にポイントで現実の買い物ができるようになれば努力する人が増えて、社会全体が良い方向に向かうのではないかと妄想しています。
 
 ## DB設計:  
-## postsテーブル
-|Column|Type|
-|------|----|
-|spirit|string|
-|technique|string|
-|body|string|
+# postsテーブル
+|Column|Type|option|
+|------|----|------|
+|id|integer|null: false|
+|spirit|string|null: false|
+|technique|string|null: false|
+|body|string|null: false|
+|user_id|reference|null: false, foreign_key: true|
+# association
+belongs_to :user
+# usersテーブル
+|Column|Type|option|
+|------|----|------|
+|id|integer|null: false|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+# association
+has_many :posts
+has_many :items
+# itemsテーブル
+|Column|Type|option|
+|------|----|------|
+|id|integer|null: false|
+|name|string|null: false|
+|price|integer|null: false|
+|explanation|string|-|
+|status|integer|null: false|
+|count|integer|null: false|
+|user_id|reference|null: false, foreign_key: true|
+# association
+belongs_to :user
 
 ## 作者:  
 twitter: https://twitter.com/XaIaQcuik2BbLGw
