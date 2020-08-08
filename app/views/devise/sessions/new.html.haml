@@ -6,12 +6,6 @@
   .formMain
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
-      -# .formMain__list
-      -#   .field
-      -#     = f.label :ニックネーム
-      -#       %em
-      -#         (6 characters maximum)
-      -#     %br= f.text_field :nickname, autofocus: true, maxlength: "6"
       .formMain__list
         .field
           = f.label :メールアドレス
@@ -20,11 +14,6 @@
         .field
           = f.label :パスワード
           %br= f.password_field :password, autocomplete: "current-password"
-          
-      -# .formMain__list
-      -#   .field
-      -#     = f.label :パスワード（確認用）
-      -#     %br= f.password_field :password_confirmation, autocomplete: "new-password"
       .formMain__list
         .actions
           = f.submit "ログイン"

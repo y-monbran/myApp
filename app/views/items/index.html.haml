@@ -14,33 +14,17 @@
         = form_with model: Item.new do |f| 
           .itemShop__main__lists__rightBox__name
             1000円券
-            -# = f.hidden_field :name, :value => @item1.name
             = f.hidden_field :name, :value => "1000円券"
-            -# = f.label :name, @item1.name
           .itemShop__main__lists__rightBox__explanation
             1000円までなら自由に使ってよい
-            -# = f.hidden_field :explanation, :value => @item1.explanation
-            -# 1000円までなら自由に使ってよい
             = f.hidden_field :explanation, :value => "1000円までなら自由に使ってよい"
-            -# = f.label :explanation, @item1.explanation
           .itemShop__main__lists__rightBox__text
             .itemShop__main__lists__rightBox__text__price
               100ポイント
               = f.hidden_field :price, :value => "100"
-              -# = f.label :price, @item1.price
-            -# = form_with model: Purchase.new do |f| 
-            -# = form_with model: Item.new do |f| 
-              -# = @item2.price
-              -# = @item2.name
-              -# = f.label :name 
-              -# = @item2
-              -# = f.label @item2.id
-              -# = f.check_box :status, {}, 1, nil
-              -# = f.submit "購入", class: "submit"
             .itemShop__main__lists__rightBox__text__btn
               = f.hidden_field :status, :value => "1"
               = f.hidden_field :count, :value => "1"
-              -# = f.hidden_field :user_id, :value => current_user.id
               -if @sum >= 100
                 = f.submit "購入", class: "submit"
               -else
@@ -107,7 +91,6 @@
             .itemShop__main__lists__rightBox__text__price
               ポイント
             .itemShop__main__lists__rightBox__text__btn
-              -# = link_to "購入する", id: "btn"
  
       .itemShop__main__lists__footer
         .itemShop__main__lists__footer__left

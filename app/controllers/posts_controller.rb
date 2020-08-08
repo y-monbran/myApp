@@ -6,16 +6,7 @@ class PostsController < ApplicationController
     @posts = Post.all.order(created_at: 'desc').limit(4)
   end
   
-  # def new
-  #   @post = Post.new
-  # end
-
-  def show
-  end
-
   def create
-    # binding.pry
-    # @user = User.find(params[:id])
     @post = Post.new(post_params)
     if @post.save
       redirect_to action: :index
