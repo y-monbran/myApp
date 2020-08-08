@@ -58,7 +58,7 @@ ruby on rails
 色々障害はあると思いますが、将来的にポイントで現実の買い物ができるようになれば努力する人が増えて、社会全体が良い方向に向かうのではないかと妄想しています。
 
 ## DB設計:  
-# postsテーブル
+### postsテーブル
 |Column|Type|option|
 |------|----|------|
 |id|integer|null: false|
@@ -66,16 +66,16 @@ ruby on rails
 |technique|string|null: false|
 |body|string|null: false|
 |user_id|reference|null: false, foreign_key: true|
-# association
+### association
 belongs_to :user
-# usersテーブル
+### usersテーブル
 |Column|Type|option|
 |------|----|------|
 |id|integer|null: false|
 |nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-# association
+### association
 has_many :posts
 has_many :items
 # itemsテーブル
@@ -88,7 +88,7 @@ has_many :items
 |status|integer|null: false|
 |count|integer|null: false|
 |user_id|reference|null: false, foreign_key: true|
-# association
+### association
 belongs_to :user
 
 ## 作者:  
