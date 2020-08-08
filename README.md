@@ -9,6 +9,9 @@
 ## 本番環境:  
 https://doryokame.herokuapp.com/  
 表示されるまで時間がかかります。30秒ほどお見積もりいただけると幸いです。  
+nickname: イチロー  
+email: a@a.com  
+password: 123456
 
 ## 制作背景(意図):  
 努力は時間で語るものではないと思いますが、少なくとも自分で自分を褒めることは必要だと思っていました。
@@ -20,11 +23,21 @@ https://doryokame.herokuapp.com/
 赤帯の歯車アイコンからマイページに移動します。  
 画面中央部の新規成果入力ボタンから入力ページに移動します。  
 吹き出しの編集・削除から編集ページ・削除ページに移動します。
-![](https://i.gyazo.com/f576658136431a4497c7adf1b2de76af.png)
+![image](https://user-images.githubusercontent.com/66244738/89706245-cae09f00-d99e-11ea-8eb4-f697197a9c6f.png)
+↑新規登録ページになります。  
+![image](https://user-images.githubusercontent.com/66244738/89706451-ba312880-d9a0-11ea-8cca-68e23d2e2411.png)
+↑ログインページになります。  
+email: a@a.com  
+password: 123456  
+を入力してください。
+![image](https://user-images.githubusercontent.com/66244738/89706486-257afa80-d9a1-11ea-97d7-e6b22e33d41b.png)
 ↑マイページになります。  
 努力の積み立てが棒グラフとして表示されます。  
 画面中央部の努力ポイントは積み立てた努力の時間です。（１ポイント=1時間）  
-画面中央部のアイテム交換は努力ポイントをアイテムと交換するページに飛びます。【未実装】
+画面中央部のアイテムショップボタンを押すとアイテムを買えるページに移動します。
+![image](https://user-images.githubusercontent.com/66244738/89706514-65da7880-d9a1-11ea-9a3b-c0c1daee3767.png)
+↑アイテムショップページになります。  
+努力ポイントが一定の値を超えるとアイテムが買えるようになります。（１００ポイント、２００ポイント、３００ポイント）    
 ![](https://i.gyazo.com/3281e1ead38bb17ee0ee6f074a001467.png)
 ↑新規成果入力ページになります。  
 心技体として、努力の時間を入力します。（心：家事など、技：勉強など、体：運動など）
